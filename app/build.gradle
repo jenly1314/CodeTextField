@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk build_versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.king.compose.codetextfield.app"
+        minSdk build_versions.minSdk
+        targetSdk build_versions.targetSdk
+        versionCode app_version.versionCode
+        versionName app_version.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.compose
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:$versions.coreKtx"
+    implementation "androidx.compose.ui:ui:$versions.compose"
+    implementation "androidx.compose.material:material:$versions.compose"
+    implementation "androidx.compose.ui:ui-tooling-preview:$versions.compose"
+//    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation "androidx.activity:activity-compose:$versions.activityCompose"
+
+    testImplementation "junit:junit:$versions.junit"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidExtJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
+
+    implementation project(":codetextfield")
+}
