@@ -15,7 +15,7 @@ ext.build_versions = build_versions
 
 def versions = [:]
 versions.mavenPublish = '0.22.0'
-versions.dokka = "1.7.0"
+versions.dokka = "1.7.20"
 versions.gradle = "7.2.1"
 versions.kotlin = "1.7.20"
 versions.coreKtx = "1.7.0"
