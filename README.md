@@ -71,7 +71,7 @@ implementation 'com.github.jenly1314:codetextfield:1.0.0'
 如果您喜欢CodeTextField，或感觉CodeTextField帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢 :smiley:<p>
 您也可以扫描下方的二维码，请作者喝杯咖啡 :coffee:
 <div>
-<img src="https://jenly1314.github.io/image/pay/sponsor.png">
+<img src="https://jenly1314.github.io/image/pay/sponsor.png" width="98%">
 </div>
 
 ## 关于我
