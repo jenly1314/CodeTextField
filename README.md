@@ -54,9 +54,9 @@ CodeTextField for Jetpack Compose；一个使用 Compose 实现的验证码输�
 
 ## 相关推荐
 
-#### [SplitEditText](https://github.com/jenly1314/SplitEditText) 一个灵活的分割可编辑框；常常应用于 **验证码输入** 、**密码输入** 等场景。
-#### [KingKeyboard](https://github.com/jenly1314/KingKeyboard) 一个自定义键盘，满足各种不同场景的键盘输入需求。
-#### [compose-component](https://github.com/jenly1314/compose-component) 一个Jetpack Compose的组件库；主要提供了一些小组件，便于快速使用。
+- [SplitEditText](https://github.com/jenly1314/SplitEditText) 一个灵活的分割可编辑框；常常应用于 **验证码输入** 、**密码输入** 等场景。
+- [KingKeyboard](https://github.com/jenly1314/KingKeyboard) 一个自定义键盘，满足各种不同场景的键盘输入需求。
+- [compose-component](https://github.com/jenly1314/compose-component) 一个Jetpack Compose的组件库；主要提供了一些小组件，便于快速使用。
 
 <!-- end -->
 
