@@ -50,7 +50,7 @@ CodeTextField for Jetpack Compose；一个使用 Compose 实现的验证码输�
 
 ```
 
-更多使用详情，请查看[app](app)中的源码使用示例或直接查看 [API帮助文档](https://jitpack.io/com/github/jenly1314/CodeTextField/latest/javadoc/)
+更多使用详情，请查看[app](app)中的源码使用示例或直接查看 [API帮助文档](https://jenly1314.github.io/CodeTextField/api/)
 
 ## 相关推荐
 
@@ -58,7 +58,9 @@ CodeTextField for Jetpack Compose；一个使用 Compose 实现的验证码输�
 #### [KingKeyboard](https://github.com/jenly1314/KingKeyboard) 一个自定义键盘，满足各种不同场景的键盘输入需求。
 #### [compose-component](https://github.com/jenly1314/compose-component) 一个Jetpack Compose的组件库；主要提供了一些小组件，便于快速使用。
 
-## 版本记录
+<!-- end -->
+
+## 版本日志
 
 #### v1.0.0：2022-11-20
 *  CodeTextField初始版本
