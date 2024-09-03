@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -68,45 +70,45 @@ private fun MainScreen() {
 @Composable
 private fun CodeTextFiledDemo() {
     Column() {
-        val text1 = remember {
+        var text1 by remember {
             mutableStateOf("")
         }
         // 验证码矩形输入框；默认
         CodeTextField(
-            value = text1.value,
+            value = text1,
             modifier = Modifier
                 .padding(10.dp)
                 .fillMaxWidth(),
             onValueChange = {
-                text1.value = it
+                text1 = it
             })
 
-        val text2 = remember {
+        var text2 by remember {
             mutableStateOf("")
         }
         // 验证码矩形输入框；移除光标颜色
         CodeTextField(
-            value = text2.value,
+            value = text2,
             modifier = Modifier
                 .padding(10.dp)
                 .fillMaxWidth(),
             onValueChange = {
-                text2.value = it
+                text2 = it
             },
             cursorBrush = SolidColor(Color.Unspecified)
         )
 
-        val text3 = remember {
+        var text3 by remember {
             mutableStateOf("")
         }
         // 验证码圆角输入框；自定义输入框颜色
         CodeTextField(
-            value = text3.value,
+            value = text3,
             modifier = Modifier
                 .padding(10.dp)
                 .fillMaxWidth(),
             onValueChange = {
-                text3.value = it
+                text3 = it
             },
             cursorBrush = SolidColor(Color.Unspecified),
             boxShape = RoundedCornerShape(10.dp),
@@ -116,12 +118,12 @@ private fun CodeTextFiledDemo() {
             ),
         )
 
-        val text4 = remember {
+        var text4 by remember {
             mutableStateOf("")
         }
         // 验证码圆角带背景输入框；突出输入的验证码以加密“*”的方式显示
         CodeTextField(
-            value = text4.value,
+            value = text4,
             modifier = Modifier
                 .padding(10.dp)
                 .fillMaxWidth(),
@@ -131,7 +133,7 @@ private fun CodeTextFiledDemo() {
                 fontWeight = FontWeight.Bold
             ),
             onValueChange = {
-                text4.value = it
+                text4 = it
             },
             cursorBrush = SolidColor(Color.Unspecified),
             boxShape = RoundedCornerShape(10.dp),
@@ -139,17 +141,17 @@ private fun CodeTextFiledDemo() {
             cipherMask = "*"
         )
 
-        val text5 = remember {
+        var text5 by remember {
             mutableStateOf("")
         }
         // 验证码矩形无间距输入框
         CodeTextField(
-            value = text5.value,
+            value = text5,
             modifier = Modifier
                 .padding(horizontal = 30.dp, vertical = 10.dp)
                 .border(BorderStroke(2.dp, color = Color.LightGray)),
             onValueChange = {
-                text5.value = it
+                text5 = it
             },
             cursorBrush = SolidColor(Color.Red),
             boxBorderStroke = BorderStroke(1.dp, color = Color.LightGray),

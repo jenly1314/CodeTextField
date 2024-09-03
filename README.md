@@ -9,7 +9,7 @@
 
 CodeTextField for Jetpack Compose；一个使用 Compose 实现的验证码输入框。
 
-> 原生 **Android自定义View** 实现的可参见 [SplitEditText](https://github.com/jenly1314/SplitEditText)
+> 原生Android View实现类似的输入框可参见 [SplitEditText](https://github.com/jenly1314/SplitEditText)
 
 ## Gif 展示
 ![Image](GIF.gif)
@@ -40,12 +40,12 @@ CodeTextField for Jetpack Compose；一个使用 Compose 实现的验证码输�
 ### 代码示例
 
 ```kotlin
-    val text = remember {
+    var text by remember {
         mutableStateOf("")
     }
     // 验证码输入框
-    CodeTextField(value = text.value, onValueChange = {
-        text.value = it
+    CodeTextField(value = text, onValueChange = {
+        text = it
     })
 
 ```
